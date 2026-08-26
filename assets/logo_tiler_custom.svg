@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1095 1095"
+    width="20"
+    height="20"
+>
+    <!-- Right vertical -->
+    <path
+        d="M795.58 91.86H986.19V729.84H795.58V91.86Z"
+        fill="currentColor"
+    />
+
+    <!-- Left vertical -->
+    <path
+        d="M108.82 326.85H299.01V965.04H108.82V326.85Z"
+        fill="currentColor"
+    />
+
+    <!-- Top horizontal -->
+    <path
+        d="M92.04 106.43H740.06V271.20H92.04V106.43Z"
+        fill="currentColor"
+    />
+
+    <!-- Bottom horizontal -->
+    <path
+        d="M355.06 785.88H1003.01V950.53H355.06V785.88Z"
+        fill="currentColor"
+    />
+
+    <!-- Center -->
+    <path
+        d="M383.88 357.23H711.12V699.77H383.88V357.23Z"
+        fill="currentColor"
+    />
+</svg>
