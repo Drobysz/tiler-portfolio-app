@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+.about_container {
+    @apply py-50 flex flex-col gap-10;
+}
+
+.title {
+    @apply text-6xl text-center font-semibold;
+}
+
+.data_space {
+    @apply grid grid-cols-2 gap-6;
+}
+
+.paramsSpace {
+    @apply flex flex-col gap-3 
+        justify-center justify-self-end;
+}
+
+.param_block {
+    @apply flex items-center gap-3
+        pr-20 text-2xl font-medium;
+}
