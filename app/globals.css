@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cursor-default: url('/cursor/mouse.png') 0 0, auto;
+  --cursor-pointer: url('/cursor/pointer.png') 0 0, pointer;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+main,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Cursor customisation */
+html,
+body {
+  cursor: var(--cursor-default);
+}
+
+a,
+button,
+[role="button"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.cursor-pointer {
+  cursor: var(--cursor-pointer) !important;
+}
+
+html.is-switcher-hovered,
+html.is-switcher-hovered * {
+  cursor: var(--cursor-pointer) !important;
+}
+
+@theme{
+  /* palette of the shades of gray */
+  --color-gray-50:  #FBFBFB;
+  --color-gray-100: #F7F7F8;
+  --color-gray-200: #F1F3F4;
+  --color-gray-300: #E4E7EA;
+  --color-gray-400: #B8BFC7;
+  --color-gray-500: #9AA3AE;
+  --color-gray-600: #76808B;
+  --color-gray-700: #5C6470;
+  --color-gray-800: #3F454F;
+  --color-gray-900: #24272D;
+
+  /* palette of the shades of green */
+  --color-primary-100: #EFFBF8;
+  --color-primary-200: #DDF6F1;
+  --color-primary-300: #B8E8DD;
+  --color-primary-400: #85D2C2;
+  --color-primary-500: #2CA894;
+  --color-primary-600: #248F7C;
+  --color-primary-700: #1C7566;
+  --color-primary-800: #155C51;
+  --color-primary-900: #0F443C;
+
+  /* custom colors */
+  --color-accent: #FF383C;
+  --color-star:   #FFCB29;
+
+  --color-violet-light: #F4ECFF;
+  --color-violet-dark:  #8A38F5;
+
+  --color-orange-light: #F8E8D7;
+  --color-orange-dark:  #DD7300;
+
+  --color-cyan-light:   #EAF8FF;
+  --color-cyan-dark:    #1695D4;
+
+  --color-blue-light:   #D6D9FF;
+  --color-blue-dark:    #2533D4;
+
+  --color-banana-light: #FFF8CC;
+  --color-banana-dark:  #846C15;
+
+  --color-green-light:  #EBF9F2;
+  --color-green-dark:   #08A95E;
+
+  --color-red-light:    #FFEFEC;
+
+  /* fonts */
+  --font-sm: var(--font-golos-sb);
+  --font-md: var(--font-golos-md);
+  --font-rg: var(--font-golos-rg);
 }
