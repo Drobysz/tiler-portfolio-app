@@ -1,0 +1,7 @@
+@reference "tailwindcss";
+
+.line_info {
+    @apply flex justify-center gap-4 pt-15 pb-2
+        bg-black text-white items-center
+        text-sm;
+}
