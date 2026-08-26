@@ -1,0 +1,11 @@
+@reference "tailwindcss";
+
+.image_cover {
+    @apply relative shrink-0 w-full 
+        max-w-full overflow-hidden 
+        rounded-2xl bg-slate-100;
+}
+
+.image_cover :global(img) {
+    @apply h-full w-full object-cover;
+}
