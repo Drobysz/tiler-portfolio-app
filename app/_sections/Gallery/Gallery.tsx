@@ -5,7 +5,6 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import s from "./style.module.scss";
 import Image from "next/image";
-import { SplitText } from "@/components/animations/Texts/SplitText/SplitText";
 
 const IMAGES_PER_ROW = 6;
 
@@ -44,15 +43,14 @@ export const Gallery = ()=> {
         <SectContainer
             className={s.container}
         >
-            <SplitText 
+            <h2
                 className={s.title}
-                tag="h2"
             >
                 Plus que 100 œuvres réalisées
-            </SplitText>
+            </h2>
             <div
                 ref={ref}
-                className="grid grid-cols-3 h-[300vh] py-30"
+                className={s.gallery_grid}
             >
                 {Array(3).fill(true).map((_, rowId)=>
                     <motion.ul
