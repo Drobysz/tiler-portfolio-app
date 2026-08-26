@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+
+.title {
+    @apply text-9xl text-white
+        font-semibold leading-36;
+}
