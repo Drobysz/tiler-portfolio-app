@@ -1,0 +1,10 @@
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
+
+export interface MainBtnProps 
+extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+    size?: "lg" | "md" | "sm";
+    children: ReactNode;
+    color?: "gray" | "green" | "white";
+    withArrow?: boolean;
+    className?: string;
+}

@@ -1,20 +1,18 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { MainBtnProps } from "./MainBtn.proprs";
 
 export const MainBtn = ({
     size="md",
     color="gray",
     withArrow=false,
+    className,
     children,
-}: {
-    size?: "lg" | "md" | "sm";
-    children: ReactNode;
-    color?: "gray" | "green";
-    withArrow?: boolean;
-})=> {
+    ...props
+}: MainBtnProps)=> {
     const [hover, setHover] = useState(false);
     const [signWidth, setSignWidth] = useState(0);
     const ref = useRef<HTMLSpanElement | null>(null);
@@ -42,15 +40,15 @@ export const MainBtn = ({
 
     }, [])
 
-    console.log(signWidth)
-
     return (
         <button
+            {...props}
             onMouseEnter={()=> setHover(true)}
             onMouseLeave={()=> setHover(false)}
             type="button"
             className={cn(
-                "backdrop-blur-3xl w-fit", 
+                className,
+                "backdrop-blur-3xl w-fit shrink-0", 
                 "overflow-hidden relative", 
                 "inline-flex items-center",
                 "transition-transform duration-150", 
@@ -59,8 +57,9 @@ export const MainBtn = ({
                     ["text-base px-3 py-1.5 rounded-xl"]: size === "md",
                     ["text-sm px-2 py-1 rounded-xl"]: size === "sm",
 
-                    ["bg-gray-400/50 hover:bg-gray-500/70"]: color === "gray",
-                    ["bg-primary-400/70 hover:bg-primary-400/90"]: color === "green",
+                    ["bg-gray-400/10 hover:bg-gray-500/30"]: color === "gray",
+                    ["bg-primary-400/10 hover:bg-primary-400/30"]: color === "green",
+                    ["bg-white hover:bg-white/90"]: "white",
                 }
             )}
             style={{ width: btnWidth }}
@@ -68,7 +67,7 @@ export const MainBtn = ({
             {withArrow &&
                 <span
                     className={cn(
-                        "inline-flex items-center gap-2",
+                        "inline-flex items-center gap-2 shrink-0",
                         transitionFast,
                         hover 
                             ? "-translate-x-4" 
@@ -89,7 +88,7 @@ export const MainBtn = ({
                         ref={ref}
                         className={cn(
                             transitionSlow,
-                            "inline-flex items-center gap-2",
+                            "inline-flex items-center gap-2 shrink-0",
                             hover && "translate-x-0.5"  
                         )}
                     >
