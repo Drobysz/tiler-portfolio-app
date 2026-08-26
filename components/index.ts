@@ -5,3 +5,4 @@ export * from "./SMbar/SMbar";
 export * from "./ImageSwitcher/ImageSwitcher";
 export * from "./UnderlinedLink/UnderlinedInnerLink";
 export * from "./UnderlinedLink/UnderlinedLink";
+export * from "./GlidingImageBackground/GlidingImageBackground";

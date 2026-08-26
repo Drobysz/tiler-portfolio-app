@@ -1,0 +1,66 @@
+"use client";
+
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import s from "./style.module.scss";
+import { GlidingImageBackgroundProps } from "./GlidingImageBackground.interface";
+
+export const GlidingImageBackground = ({
+    img_url,
+    withShadow = false,
+    className,
+    children,
+    ...props
+}: GlidingImageBackgroundProps)=> {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end 30%"]
+    });
+    const translateY = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ["-20%", "10%"],
+    );
+
+    const scale = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ["1.6", "1.2"],
+    );
+
+    return (
+        <motion.div
+            {...props}
+            className={cn(className, "relative overflow-hidden")}
+            ref={containerRef}
+        >
+            <motion.div 
+                className="absolute inset-0 h-full w-full"
+                style={{
+                    translateY: translateY,
+                    scale: scale,
+                }}
+            >
+                <Image
+                    className="w-full h-auto"
+                    src={img_url}
+                    width={1200}
+                    height={1200}
+                    alt="sliding background image"
+                />
+            </motion.div>
+            {withShadow &&
+                <motion.div
+                    className={cn(
+                        "absolute inset-0 bg-black/80 pointer-events-none",
+                        s.shadow
+                    )}
+                />
+            }
+            {children}
+        </motion.div>
+    )
+}
