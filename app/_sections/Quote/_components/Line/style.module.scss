@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+
+.line {
+    @apply h-px w-full text-zinc-400
+        bg-zinc-400 origin-left;
+}
