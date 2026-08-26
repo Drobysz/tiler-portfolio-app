@@ -2,9 +2,11 @@
 
 .scrollTopBtn {
     @apply fixed bottom-4 right-4 
-        duration-300 hover:opacity-90
+        transition-transform
+        duration-300 hover:scale-105
         ease-in-out active:scale-97 px-3
-        py-2 rounded-3xl z-20 bg-zinc-500;
+        py-2 rounded-xl z-20 bg-zinc-500/30
+        backdrop-blur-xl;
     min-height: 0;
     transition: 
         transform 0.3s ease-in-out
