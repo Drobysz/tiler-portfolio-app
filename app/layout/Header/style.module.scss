@@ -1,7 +1,8 @@
 @reference "tailwindcss";
 
 .wrapper {
-    @apply fixed top-10 px-5 w-full justify-center z-100;
+    @apply fixed top-10 px-5 w-full 
+        justify-center z-100 pointer-events-auto;
     display: grid;
     grid-template-columns: auto minmax(270px, 1440px) auto;
     grid-template-areas: ". header .";

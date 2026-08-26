@@ -65,9 +65,10 @@ export const Navigation = ({
     isMainPage: boolean;
 })=> {
     const pages = [
-        { label: "Main Page", href: "/" },
+        { label: "Page d'accueil", href: "/" },
         { label: "Projets", href: "/projects" },
         { label: "Contacts", href: "/contacts" },
+        { label: "Fournisseurs", href: "/furnishers" },
     ];
 
     return (
