@@ -1,0 +1,29 @@
+@reference "tailwindcss";
+
+.latest_proj_card {
+    @apply backdrop-blur-2xl rounded-lg
+        p-1 w-full h-full -translate-y-10;
+}
+
+.image_wrapper {
+    @apply overflow-hidden relative 
+        w-68 h-37.5 rounded-[inherit];
+}
+
+.image {
+    @apply absolute inset-0 
+        w-full h-full;
+}
+
+.inner_content {
+    @apply flex flex-col gap-8 
+        text-white p-1 pt-3;
+}
+
+.title {
+    @apply text-2xl font-semibold;
+}
+
+.tag {
+    @apply text-sm;
+}
