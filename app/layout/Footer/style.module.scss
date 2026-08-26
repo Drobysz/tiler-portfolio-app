@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .wrapper {
-    @apply px-4 rounded-t-2xl bg-black text-white;
+    @apply relative px-4 rounded-t-2xl bg-black text-white -mt-20 z-20;
     display: grid;
     grid-template-columns: auto minmax(270px, 1440) auto;
     grid-template-areas: ". footer .";
@@ -10,4 +10,9 @@
 .footer {
     grid-area: footer;
     @apply grid grid-cols-2 px-5 py-10;
+}
+
+.title {
+    @apply bg-black text-white 
+        text-6xl font-medium;
 }
