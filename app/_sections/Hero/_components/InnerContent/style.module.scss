@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+
+.inner_content {
+    @apply flex items-end justify-between
+        z-20 p-7 pt-0 w-full;
+}
