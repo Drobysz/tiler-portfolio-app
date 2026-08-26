@@ -1,0 +1,15 @@
+@reference "tailwindcss";
+
+.title {
+    @apply text-center font-semibold 
+        text-yellow-500 text-9xl
+        leading-40;
+}
+
+.separator {
+    @apply w-1 h-[150px] bg-yellow-500;
+}
+
+.logo {
+    @apply w-35 h-35 text-yellow-500 rotate-45;
+}
