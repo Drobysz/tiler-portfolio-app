@@ -1,0 +1,20 @@
+@reference "tailwindcss";
+
+.quote_container {
+    @apply flex flex-col gap-5 py-30;
+}
+
+.title {
+    @apply text-4xl font-medium
+        leading-18 
+        // bg-linear-to-r
+		// from-[#2CA894] to-[#1AC6AB]
+        // bg-clip-text text-transparent
+        ;
+}
+
+.quote {
+    @apply max-w-150
+        text-3xl text-zinc-700
+        font-medium;
+}
