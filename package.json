@@ -9,11 +9,21 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^13.1.1",
+    "locomotive-scroll": "^5.0.1",
+    "lucide-react": "^1.33.0",
     "next": "16.3.2",
+    "next-plugin-svgr": "^1.1.12",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "sass": "^1.103.1",
+    "split-type": "^0.3.4",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
