@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import s from "./layout/layout.module.scss";
+import { GlobalContextProvider } from "./context/global.context";
+import { SmoothScrollContextProvider } from "./layout/SmoothScroll";
+import { LayoutOverlays } from "./layout/LayoutOverlays/LayoutOverlays";
+import { cn } from "@/lib/utils";
+import { prime_regular } from "@/fonts/fonts";
+import {
+  Header,
+  Footer,
+} from "./layout/index";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,10 +19,27 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="fr"
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body 
+        className={cn(
+          "min-h-full flex flex-col",
+          prime_regular.className,
+        )}
+      >
+        <GlobalContextProvider>
+          <SmoothScrollContextProvider>
+            <div className={s.wrapper}>
+              <Header />
+              <main className="min-h-screen">
+                {children}
+              </main>
+              <Footer />
+            </div>
+            <LayoutOverlays />
+          </SmoothScrollContextProvider>
+        </GlobalContextProvider>
+      </body>
     </html>
   );
 }
