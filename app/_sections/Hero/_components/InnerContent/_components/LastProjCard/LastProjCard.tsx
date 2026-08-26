@@ -45,12 +45,12 @@ export const LastProjCard = ()=> {
                         monserrat_regular.className,
                         s.tag,
                     )}>
-                        Latest project
+                        Dernier projet
                     </p>
 
                     <div className="flex items-center justify-between">
                         <h2 className={s.title}>
-                            See the project
+                            Découvrez le projet
                         </h2>
                         <div
                             className={cn(

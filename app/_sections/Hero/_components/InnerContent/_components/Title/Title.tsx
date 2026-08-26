@@ -7,19 +7,19 @@ export const Title = ()=> {
             <SplitByRowsText
                 tag="span"
             >
-                {"I'm good"}
+                Je maîtrise
             </SplitByRowsText>
 
             <SplitByRowsText
                 tag="span"
             >
-                at laying
+                l&lsquo;art du
             </SplitByRowsText>
 
             <SplitByRowsText
                 tag="span"
             >
-                tile                    
+                carrelage.                    
             </SplitByRowsText>
         </h1>
     )
