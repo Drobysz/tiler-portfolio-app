@@ -24,7 +24,7 @@ const ParamBlock = ({
     icon: LucideIcon
 })=> {
     const [hover, setHover] = useState(false);
-    const transition = "duration-4s50 ease-out transition-transform"
+    const transition = "duration-450 ease-out transition-transform"
 
     return (
         <li
@@ -68,24 +68,35 @@ export const WorkerAbout = ()=> {
                 tag="h2"
                 animationType="unwrapping"
             >
-                About the tiler
+                Profil du carreleur
             </SplitText>
 
             <div className={s.data_space}>
-                <ul className={s.paramsSpace}>
-                    {tilerParams.map((param, idx)=>
-                        <ParamBlock
-                            key={`tiler-param-${idx}`}
-                            label={param.label}
-                            icon={param.icon}
-                        />
-                    )}
-                </ul>
+                <div className="flex flex-col justify-between items-end py-12">
+                    <div className="flex flex-col">
+                        <h3 className="text-3xl font-medium text-end">
+                            Un travail précis pour durer
+                        </h3>
+
+                        <p className="text-end text-zinc-500 text-sm">
+                            Carrelage • Faïence • Parquet • Panneaux décoratifs
+                        </p>
+                    </div>
+                    <ul className={s.paramsSpace}>
+                        {tilerParams.map((param, idx)=>
+                            <ParamBlock
+                                key={`tiler-param-${idx}`}
+                                label={param.label}
+                                icon={param.icon}
+                            />
+                        )}
+                    </ul>
+                </div>
                 <ViewReveal>
                     <ProfileCard
                         className="z-10"
                         name="Didier Puget"
-                        title="+10 year experience tiler"
+                        title="+4,5 ans d'expérience en tant que carreleur"
                         handle="tiles"
                         status="Online"
                         contactText="Contact Me"
