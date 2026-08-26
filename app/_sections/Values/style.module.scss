@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+.values_container {
+    @apply px-6 py-8 text-white
+        flex flex-col gap-30;
+}
+
+.title {
+    @apply text-4xl font-semibold;
+}
+
+.desc {
+    @apply font-medium text-3xl;
+}
+
+.value_block {
+    @apply flex gap-4;
+    &__line_space {
+        @apply flex flex-col gap-2;
+    }
+    &__title {
+        @apply text-3xl;
+    }
+    &__text_markup {
+        @apply grid grid-cols-3;
+    }
+}
