@@ -2,9 +2,11 @@ import { Metadata } from "next";
 import {
   Hero,
   Quote,
+  Gallery,
   ServiceAnimationFeed,
   Values,
   WorkerAbout,
+  Contact,
 } from "./_sections";
 
 export const metadata: Metadata = {
@@ -17,9 +19,11 @@ export default function Home() {
     <div>
       <Hero />
       <Quote />
-      <ServiceAnimationFeed />
+      <Gallery />
       <Values />
+      <ServiceAnimationFeed />
       <WorkerAbout />
+      <Contact />
     </div>
   );
 }
