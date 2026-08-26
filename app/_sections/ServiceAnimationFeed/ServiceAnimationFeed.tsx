@@ -4,15 +4,15 @@ import { SectContainer } from "@/components/containers/SectContainer/SectContain
 export const ServiceAnimationFeed = ()=> {
     return (
         <SectContainer
-         className="pt-30 pb-60"
+         className="pt-60 pb-30"
         >
             <div
                 className="scale-115 rotate-3"
             >
                 <ScrollVelocity
                     texts={[
-                        'Carrelage • Faience •', 
-                        'Parquet • Panneaux decorative •',
+                        'Carrelage • Faïence •', 
+                        'Parquet • Panneaux décoratifs •',
                     ]} 
                     velocity={100}
                     className="custom-scroll-text"
