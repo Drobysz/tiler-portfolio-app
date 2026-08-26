@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Instagram",
+        "img": "/social/instagram.svg",
+        "link": "https://www.instagram.com/"
+    },
+
+    {
+        "title": "LinkedIn",
+        "img": "/social/linkedin.svg",
+        "link": "https://linkedin.com/"
+    },
+
+    {
+        "title": "Telegram",
+        "img": "/social/telegram.svg",
+        "link": "https://t.me/gogonga"
+    }
+]
