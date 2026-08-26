@@ -1,0 +1,15 @@
+@reference "tailwindcss";
+
+.title {
+    @apply text-9xl font-semibold text-white
+        text-center;
+}
+
+.subtitle {
+    @apply text-center text-2xl text-zinc-200
+        font-semibold;
+}
+
+.desc {
+    @apply text-center text-white max-w-80;
+}
