@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+.title_back {
+    @apply flex h-full w-full items-center
+        justify-center bg-black text-white
+        text-5xl font-semibold;
+}
+
+.title_front {
+    @apply flex h-full w-full items-center
+        justify-center bg-white
+        font-semibold text-7xl;
+        &__rows {
+            @apply flex flex-col z-20
+                bg-clip-text text-transparent
+                bg-yellow-400/90;
+        }
+        &::before {
+            content: "";
+            @apply absolute -inset-4 -z-10
+                bg-white/40 backdrop-blur-3xl;
+        }
+}
