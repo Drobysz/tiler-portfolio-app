@@ -20,7 +20,7 @@ export const Hero = ()=> {
     });
 
     useMotionValueEvent(globalScrollY, "change", (current)=> {
-        if (current < 200) {
+        if (current < 500) {
             setNarrowed(true);
         } else {
             setNarrowed(false);
@@ -38,7 +38,7 @@ export const Hero = ()=> {
 
     return (
         <section
-            className="p-3 h-[150vh]"
+            className="p-3 h-[250vh]"
             ref={refElevator}
         >
             <div className="sticky top-0 pt-5">
