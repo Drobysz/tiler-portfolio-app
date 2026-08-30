@@ -1,0 +1,37 @@
+[
+    {
+        "name": "material",
+        "label": "Materiel",
+        "options": [
+            "carrelage", "faience", 
+            "parquet", "panneaux decoratifs"
+        ]
+    },
+    {
+        "name": "installationStyle",
+        "label": "Style d'installation",
+        "type": "select",
+        "options": [
+            "droite", "diagonale", 
+            "decalee", "chevrons", "autre"
+        ]
+    },
+    {
+        "name": "format",
+        "label": "Format du carrelage",
+        "placeholder": "Ex. : 30 × 60 cm, 60 × 60 cm",
+        "type": "text"
+    },
+    {
+        "name": "dimensions",
+        "label": "Dimensions",
+        "type": "text",
+        "placeholder": "30m x 30x"
+    },
+    {
+        "name": "description",
+        "label": "Description du projet",
+        "type": "text",
+        "placeholder": "Decrivez votre projet"
+    }
+]
