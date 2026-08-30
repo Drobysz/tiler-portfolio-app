@@ -15,8 +15,7 @@ export const LastProjCard = ()=> {
 
     return (
         <Link
-            href="#"
-            target="_blank"
+            href="/projects"
             onMouseEnter={()=> setHover(true)}
             onMouseLeave={()=> setHover(false)}
         >
@@ -36,8 +35,8 @@ export const LastProjCard = ()=> {
                         )}
                         src="/last_proj.jpg"
                         alt="Last project"
-                        width={272}
-                        height={170}
+                        fill
+                        sizes="272px"
                     />
                 </div>
                 <div className={s.inner_content}>

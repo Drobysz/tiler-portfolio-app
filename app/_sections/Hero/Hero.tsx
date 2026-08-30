@@ -20,7 +20,7 @@ export const Hero = ()=> {
     });
 
     useMotionValueEvent(globalScrollY, "change", (current)=> {
-        if (current < 500) {
+        if (current < 400) {
             setNarrowed(true);
         } else {
             setNarrowed(false);
@@ -38,10 +38,10 @@ export const Hero = ()=> {
 
     return (
         <section
-            className="p-3 h-[250vh]"
+            className="px-1.5 h-[250vh]"
             ref={refElevator}
         >
-            <div className="sticky top-0 pt-5">
+            <div className="sticky top-0 pt-1.5">
                 <motion.div
                     className={s.video_container}
                     style={{

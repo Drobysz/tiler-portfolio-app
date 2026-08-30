@@ -31,10 +31,9 @@ export const Quote = ()=> {
                         monserrat_medium.className
                     )}>
                         <QuotionMark />
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Est, quis accusantium cupiditate aspernatur iusto veniam 
-                            impedit optio obcaecati neque voluptatem facilis consectetur 
-                            aut earum magni esse tempore laboriosam quia error.
+                            Pour moi, un beau résultat se joue dans les détails. 
+                            Chaque pose demande de la précision, de la patience 
+                            et une attention particulière aux finitions.
                         <QuotionMark />
                     </p>
                 </ViewReveal>

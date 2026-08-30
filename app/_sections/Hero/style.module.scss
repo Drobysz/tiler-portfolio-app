@@ -6,11 +6,6 @@
         flex items-end relative;
 }
 
-.video_tag_centralize {
-    @apply absolute -translate-1/2
-        left-1/2 top-1/2;
-}
-
 .scrollTitle {
     @apply absolute left-1/2 top-1/2 
         -translate-1/2 text-amber-400

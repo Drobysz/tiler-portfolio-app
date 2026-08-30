@@ -11,8 +11,7 @@
 }
 
 .image {
-    @apply absolute inset-0 
-        w-full h-full;
+    @apply object-cover;
 }
 
 .inner_content {
