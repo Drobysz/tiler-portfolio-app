@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^9.4.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "framer-motion": "^13.1.1",
@@ -21,7 +24,8 @@
     "react-dom": "19.2.8",
     "sass": "^1.103.1",
     "split-type": "^0.3.4",
-    "tailwind-merge": "^3.6.0"
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
