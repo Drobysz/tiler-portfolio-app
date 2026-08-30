@@ -2,7 +2,26 @@ import {
 	Golos_Text, 
 	Inter,
 	Montserrat,
+	VT323,
+	Bagel_Fat_One,
 } from "next/font/google"; 
+import localFont from "next/font/local";
+
+export const trade_winds = localFont({
+    src: "./TradeWinds.ttf"
+});
+
+export const bagel_regular = Bagel_Fat_One({
+	weight: '400',
+	subsets: ['latin'],
+	variable: '--font_bagel_rg'
+});
+
+export const vt323_regular = VT323({
+	weight: '400',
+	subsets: ['latin'],
+	variable: '--font_vt323_rg'
+});
 
 export const inter_regular = Inter({
 	weight: '400',
