@@ -16,7 +16,6 @@ export const ServiceAnimationFeed = ()=> {
                     ]} 
                     velocity={100}
                     className="custom-scroll-text"
-                    numCopies={6}
                     damping={50}
                     stiffness={400}
                 />

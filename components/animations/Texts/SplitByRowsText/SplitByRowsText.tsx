@@ -1,10 +1,9 @@
 "use client";
 
 import { Tag } from "../types";
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { animate, motion, stagger, useInView } from "framer-motion";
 import SplitType from "split-type";
-import { cn } from "@/lib/utils";
 
 export const SplitByRowsText = ({
     tag,
@@ -27,10 +26,8 @@ export const SplitByRowsText = ({
     } as const;
 
     const MotionTag = motionTags[tag];
-    const tagId = useId();
     const parentRef = useRef<HTMLSpanElement | null>(null);
     const linesRef = useRef<HTMLElement[]>([]);
-    const lineClass = `split-line-${tagId}`;
 
     const isInView = useInView(parentRef, {
         once: true,
@@ -39,35 +36,63 @@ export const SplitByRowsText = ({
 
     useEffect(()=> {
         if (!parentRef.current) return;
+        const element = parentRef.current;
 
-        const split = new SplitType(parentRef.current, {
-            types: "lines",
-            lineClass: lineClass
+        let split: SplitType | null = null;
+        let frameId: number | null = null;
+        let prevWidth = element.getBoundingClientRect().width;
+
+        const rebuild = ()=> {
+            split?.revert()
+            split = new SplitType(element, {
+                types: "lines"
+            })
+            split.lines?.forEach(line => {
+                const wrapper = document.createElement("div");
+
+                wrapper.style.overflow = "hidden";
+                line.style.transformOrigin = "left bottom";
+                line.style.overflow = "hidden";
+                
+                line.parentNode?.insertBefore(wrapper, line);
+                wrapper.appendChild(line);
+            });
+            linesRef.current = split.lines ?? [];
+        }
+
+        rebuild();
+
+        const observer = new ResizeObserver(([entry]) => {
+            const width = entry.contentRect.width;
+            if (Math.abs(width - prevWidth) < 1) {
+                return;
+            }
+            prevWidth = width;
+            if (frameId !== null) {
+                cancelAnimationFrame(frameId);
+            }
+            frameId = requestAnimationFrame(() => {
+                rebuild();
+                frameId = null;
+            });
         });
 
-        split.lines?.forEach(line => {
-            const wrapper = document.createElement("div");
-
-            wrapper.style.overflow = "hidden";
-            line.style.transformOrigin = "left bottom";
-            
-            line.parentNode?.insertBefore(wrapper, line);
-            wrapper.appendChild(line);
-        });
-
-        linesRef.current = split.lines ?? [];
+        observer.observe(element);
 
         return ()=> {
-            split.revert();
-            linesRef.current = []
+            observer.disconnect();
+            if (frameId !== null) {
+                cancelAnimationFrame(frameId);
+            }
+            split?.revert();
         }
-    }, [children, lineClass])
+    }, [children])
 
     useEffect(()=> {
         if (!isInView || !linesRef.current.length) return;
 
         const controls = animate(
-            "." + lineClass,
+            linesRef.current,
             {
 
                 y: ["80%", "0%"],
@@ -83,7 +108,7 @@ export const SplitByRowsText = ({
         return ()=> {
             controls.stop();
         }
-    }, [isInView, lineClass])
+    }, [isInView])
 
     return (
         <MotionTag
