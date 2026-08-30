@@ -3,7 +3,7 @@
 import { useContext, useState } from 'react';
 import s from './styles.module.scss';
 import { ChevronUp } from "lucide-react";
-import { SmoothScrollContext } from '@/app/layout/SmoothScroll';
+import { SmoothScrollContext } from '@/app/layout/SmoothScroll/SmoothScroll';
 import { useMotionValueEvent, useScroll } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
