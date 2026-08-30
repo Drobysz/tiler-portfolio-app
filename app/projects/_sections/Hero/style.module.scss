@@ -13,11 +13,6 @@
         &__rows {
             @apply flex flex-col z-20
                 bg-clip-text text-transparent
-                bg-yellow-400/90;
-        }
-        &::before {
-            content: "";
-            @apply absolute -inset-4 -z-10
-                bg-white/40 backdrop-blur-3xl;
+                bg-yellow-400;
         }
 }

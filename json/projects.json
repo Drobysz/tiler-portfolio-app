@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Pose d’un parquet dans une pièce de vie",
+        "tags": ["12m x 12m", "bois", "parquet"],
+        "type": "parquet",
+        "id": "project1",
+        "date": "23/08/26",
+        "cover_img_url": "/covers/proj1.jpg",
+        "gallery": [],
+        "cover_description": "Pose d’un parquet en bois pour créer un sol chaleureux, régulier et durable.",
+        "description": "",
+        "dimensions": "12m x 12m"
+    },
+    {
+        "name": "Habillage mural avec panneaux décoratifs",
+        "tags": ["45m x 23m", "bois", "panneaux"],
+        "type": "Panneaux décoratifs",
+        "id": "project2",
+        "date": "16/08/26",
+        "cover_img_url": "/covers/proj2.jpg",
+        "gallery": [],
+        "cover_description": "Installation de panneaux décoratifs en bois pour apporter du relief et du caractère à l’espace.",
+        "description": "",
+        "dimensions": "45m x 23m"
+    },
+    {
+        "name": "Pose de faïence murale",
+        "tags": ["8m x 8m", "céramique", "faïence"],
+        "type": "Faïence",
+        "id": "project3",
+        "date": "08/08/26",
+        "cover_img_url": "/covers/proj3.jpg",
+        "gallery": [],
+        "cover_description": "Pose soignée de faïence avec des alignements précis et des finitions propres.",
+        "description": "",
+        "dimensions": "8m x 8m"
+    },
+    {
+        "name": "Pose de carrelage extérieur",
+        "tags": ["12m x 6m", "grès cérame", "carrelage"],
+        "type": "Carrelage",
+        "id": "project4",
+        "date": "02/08/26",
+        "cover_img_url": "/covers/proj4.jpg",
+        "gallery": [],
+        "cover_description": "Réalisation d’un sol carrelé extérieur avec une pose régulière et des joints soignés.",
+        "description": "",
+        "dimensions": "12m x 6m"
+    }
+]

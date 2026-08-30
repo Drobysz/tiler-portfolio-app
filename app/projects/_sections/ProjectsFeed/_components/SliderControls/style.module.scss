@@ -1,0 +1,24 @@
+@reference "tailwindcss";
+
+.tunnel {
+    @apply absolute inset-0 h-full 
+        w-full flex justify-center pb-25;
+}
+
+.elevator {
+    @apply sticky top-0 h-screen 
+        w-150 flex items-end gap-3
+        pb-3;
+}
+
+.controls_panel {
+    @apply w-full bg-black/10
+        backdrop-blur-3xl rounded-2xl
+        py-3 px-5 text-white flex
+        flex-col gap-5 transition-[height]
+        duration-250 ease-in;
+}
+
+// .controls_btns_container {
+//     @apply ;   
+// }

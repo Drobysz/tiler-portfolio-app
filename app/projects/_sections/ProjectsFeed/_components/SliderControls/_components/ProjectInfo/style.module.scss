@@ -1,0 +1,44 @@
+@reference "tailwindcss";
+
+.upper_part {
+    @apply flex h-full;
+}
+
+.logo_title {
+    @apply text-white text-xl
+        font-semibold
+        pr-10 pl-5 capitalize
+        flex flex-col;
+}
+
+.separator {
+    @apply bg-gray-400 w-px h-35;
+}
+
+.title_container {
+    @apply flex flex-col gap-7
+        px-4;
+        
+    .title {
+        @apply text-4xl font-semibold;
+    }
+}
+
+.tag {
+    @apply text-sm text-gray-300;
+}
+
+.desc_wrapper {
+    @apply grid opacity-0;
+    grid-template-rows: 0fr;
+    transition:
+        grid-template-rows 400ms ease,
+        opacity 300ms ease;
+    > div {
+        overflow: hidden;
+    }
+}
+
+.desc_wrapper_extended {
+    @apply grid-rows-1 opacity-100;
+}

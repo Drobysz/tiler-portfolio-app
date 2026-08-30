@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.control_btns_container {
+    @apply flex justify-between;
+}
+
+.btn_group {
+    @apply inline-flex gap-2 items-center;
+}

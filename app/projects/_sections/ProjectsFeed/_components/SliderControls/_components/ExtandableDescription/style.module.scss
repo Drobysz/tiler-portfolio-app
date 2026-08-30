@@ -1,0 +1,13 @@
+@reference "tailwindcss" 
+
+.desc_wrapper {
+    @apply grid opacity-0;
+    grid-template-rows: 0fr;
+    transition:
+        grid-template-rows 400ms ease,
+        opacity 300ms ease;
+}
+
+.desc_wrapper_extended {
+    @apply grid-rows-1 opacity-100;
+}
