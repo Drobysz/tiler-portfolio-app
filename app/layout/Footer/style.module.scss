@@ -14,5 +14,6 @@
 
 .title {
     @apply bg-black text-white 
-        text-6xl font-medium;
+        text-4xl font-medium flex 
+        items-center gap-2;
 }

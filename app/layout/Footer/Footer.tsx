@@ -7,6 +7,7 @@ import {
     Navigation,
     ExtendingPoster,
     InfoLine,
+    DeveloperLink,
 } from "./_components";
 import { SMbar } from "@/components/SMbar/SMbar";
 import social_medias from "@/json/sm_list.json";
@@ -29,7 +30,10 @@ export const Footer = ({
                         <Logo />
                         <div className="flex flex-col gap-2">
                             <h2 className={s.title}>
-                                À votre service
+                                <span>
+                                    Développé par
+                                </span>
+                                <DeveloperLink />
                             </h2>    
                         </div>
                     </div>

@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.dev_title {
+  @apply inline-block text-4xl font-[inherit];
+
+    background: linear-gradient(
+        to top,
+        #facc15 0%,
+        #facc15 50%,
+        #fff 50%,
+        #fff 100%
+    );
+
+    background-size: 100% 200%;
+    background-position: 0 0;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    transition: background-position 600ms ease;
+}
+
+.dev_title:hover {
+    background-position: 0 100%;
+}

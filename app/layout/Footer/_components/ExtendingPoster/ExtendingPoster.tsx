@@ -1,13 +1,17 @@
 "use client";
 
 import { GlidingImageBackground } from "@/components";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import LogoIcon from "@/assets/logo_tiler_custom.svg";
 import s from "./style.module.scss";
 import { SplitByRowsText } from "@/components/animations/Texts/SplitByRowsText/SplitByRowsText";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import footerPosters from "./footerPosters";
+import { FooterPosterLogo } from "./_components/FooterPosterLogo";
 
 export const ExtendingPoster = ()=> {
+    const pathname = usePathname();
     const containerRef = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -19,53 +23,48 @@ export const ExtendingPoster = ()=> {
         ["-100%", "0%"],
     );
 
+    const pageFooterPoster = footerPosters[pathname] ?? footerPosters["/"];
+
     return (
         <div
             ref={containerRef}
             className="bg-black"
         >
-            <motion.div
-                className="overflow-hidden h-[80vh] rounded-t-2xl z-20"
+            <div
+                className={s.container}
             >
                 <GlidingImageBackground
                     style={{
                         translateY: translateY
                     }}
-                    img_url="/footer_back.jpg"
-                    className="flex justify-center items-center h-full"
+                    img_url={pageFooterPoster.img_url}
+                    className={s.poster_container}
                 >
-                    <div className="flex items-center gap-10 z-10">
+                    <div className={s.enterprise_name_logo}>
                         <SplitByRowsText 
-                            className={s.title}
+                            className={cn(
+                                s.title,
+                                pageFooterPoster.textColor,
+                            )}
                             tag="h2"
                         >
                             D.P Carrelages
                         </SplitByRowsText>
                         <div
-                            className={s.separator}
+                            className={cn(
+                                s.separator,
+                                pageFooterPoster.backColor,
+                            )}
                         />
-                        <motion.div
-                            viewport={{
-                                once: true,
-                            }}
-                            initial={{
-                                rotate: 45
-                            }}
-                            whileInView={{
-                                rotate: 275
-                            }}
-                            transition={{
-                                duration: 1.5,
-                                ease: [0.34, 1.56, 0.64, 1],
-                            }}
-                        >
-                            <LogoIcon
-                                className={s.logo}
-                            />
-                        </motion.div>
+                        <FooterPosterLogo 
+                            classNames={cn(
+                                s.logo,
+                                pageFooterPoster.textColor,
+                            )}
+                        />
                     </div>
                 </GlidingImageBackground>
-            </motion.div>
+            </div>
         </div>
     )
 }
