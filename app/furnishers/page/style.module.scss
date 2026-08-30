@@ -1,0 +1,50 @@
+@reference "tailwindcss";
+
+.blurred_back {
+    @apply bg-black/10 backdrop-blur-xl;
+}
+
+.elevator {
+    @apply sticky top-0 h-screen 
+        flex flex-col justify-end 
+        gap-3 pb-3 px-2 text-white;
+}
+
+.panel {
+    @apply rounded-2xl p-3 pt-2
+        h-fit max-w-150 flex gap-3 
+        items-center;
+}
+
+.logo_back {
+    @apply rounded-2xl bg-gray-50
+        px-3 py-2;
+}
+
+.title {
+    @apply font-semibold text-3xl;
+}
+
+.separator {
+    @apply bg-zinc-400 h-full w-px rounded-full;
+}
+
+.desc {
+    @apply text-gray-200 text-sm w-full;
+}
+
+.btns_container {
+    @apply self-end flex 
+        items-center gap-3
+        w-full;
+}
+
+.slider_btn {
+    @apply px-4 py-2 rounded-xl h-full;
+}
+
+.page_pagination_display {
+    @apply px-3 py-2 w-full
+        rounded-xl flex items-center
+        justify-center gap-2;
+}
