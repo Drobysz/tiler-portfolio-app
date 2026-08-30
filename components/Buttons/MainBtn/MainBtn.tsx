@@ -2,13 +2,19 @@
 
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { 
+    ArrowRight,
+    SquareArrowOutUpRight,
+    Plus,
+    Minus,
+} from "lucide-react";
 import { MainBtnProps } from "./MainBtn.proprs";
 
 export const MainBtn = ({
     size="md",
     color="gray",
     withArrow=false,
+    icon="arrow",
     className,
     children,
     ...props
@@ -22,8 +28,14 @@ export const MainBtn = ({
     const iconSizes = {
         ["scale-75"]: size === "lg",
         ["scale-65"]: size === "md",
-        ["scale-55"]: size === "sm",
+        ["scale-64"]: size === "sm",
     };
+    const icons = {
+        "arrow": ArrowRight,
+        "link": SquareArrowOutUpRight,
+        "plus": Plus,
+        "minus": Minus
+    }
     const widthBufferSizeGrid = {
         "lg": 36,
         "md": 24,
@@ -33,6 +45,8 @@ export const MainBtn = ({
     const btnWidth = withArrow 
         ? `${signWidth + widthBufferSizeGrid[size]}px` 
         : "fit-content";
+    
+    const BtnIcon = icons[icon];
 
     useEffect(()=>{
         if (!ref.current) return;
@@ -45,7 +59,6 @@ export const MainBtn = ({
             {...props}
             onMouseEnter={()=> setHover(true)}
             onMouseLeave={()=> setHover(false)}
-            type="button"
             className={cn(
                 className,
                 "backdrop-blur-3xl w-fit shrink-0", 
@@ -57,9 +70,9 @@ export const MainBtn = ({
                     ["text-base px-3 py-1.5 rounded-xl"]: size === "md",
                     ["text-sm px-2 py-1 rounded-xl"]: size === "sm",
 
-                    ["bg-gray-400/10 hover:bg-gray-500/30"]: color === "gray",
-                    ["bg-primary-400/10 hover:bg-primary-400/30"]: color === "green",
-                    ["bg-white hover:bg-white/90"]: "white",
+                    ["bg-gray-400/10 hover:bg-gray-500/30 text-white"]: color === "gray",
+                    ["bg-primary-400/10 hover:bg-primary-400/30 text-white"]: color === "green",
+                    ["bg-white hover:bg-white/90 text-black"]: "white",
                 }
             )}
             style={{ width: btnWidth }}
@@ -71,10 +84,10 @@ export const MainBtn = ({
                         transitionFast,
                         hover 
                             ? "-translate-x-4" 
-                            : "-translate-x-7"
+                            : "-translate-x-7.5"
                     )}
                 >
-                    <ArrowRight
+                    <BtnIcon
                         className={cn(
                             "pt-0.5",
                             transitionSlow,
@@ -93,7 +106,7 @@ export const MainBtn = ({
                         )}
                     >
                         {children}
-                        <ArrowRight
+                        <BtnIcon
                             className={cn(
                                 "scale-65 pt-0.5",
                                 transitionFast,

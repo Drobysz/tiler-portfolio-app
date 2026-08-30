@@ -7,4 +7,5 @@ extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonEle
     color?: "gray" | "green" | "white";
     withArrow?: boolean;
     className?: string;
+    icon?: "arrow" | "link" | "plus" | "minus";
 }

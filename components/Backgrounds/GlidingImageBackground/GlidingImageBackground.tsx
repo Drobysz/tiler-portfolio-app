@@ -10,6 +10,7 @@ import { GlidingImageBackgroundProps } from "./GlidingImageBackground.interface"
 export const GlidingImageBackground = ({
     img_url,
     withShadow = false,
+    scaling = true,
     className,
     children,
     ...props
@@ -41,7 +42,7 @@ export const GlidingImageBackground = ({
                 className="absolute inset-0 h-full w-full"
                 style={{
                     translateY: translateY,
-                    scale: scale,
+                    scale: scaling ? scale : 1,
                 }}
             >
                 <Image
