@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+
+.infoList {
+    @apply flex flex-col gap-3
+        items-center;
+} 

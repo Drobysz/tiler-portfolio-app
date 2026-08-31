@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 import s from "./style.module.scss";
 import {
     Logo,
-    Navigation,
     ExtendingPoster,
     InfoLine,
     DeveloperLink,
 } from "./_components";
+import { Navigation } from "@/components";
 import { SMbar } from "@/components/SMbar/SMbar";
 import social_medias from "@/json/sm_list.json";
 
@@ -26,7 +26,7 @@ export const Footer = ({
                 )}
             >
                 <div className={cn(s.footer)}>
-                    <div className="flex flex-col justify-between text-white">
+                    <div className={s.logo_container}>
                         <Logo />
                         <div className="flex flex-col gap-2">
                             <h2 className={s.title}>
@@ -37,10 +37,12 @@ export const Footer = ({
                             </h2>    
                         </div>
                     </div>
-                    <div className="flex flex-col gap-3">
-                        <Navigation />
+                    <div className={s.nav_container}>
+                        <Navigation 
+                            className="pb-10"
+                        />
                         <SMbar
-                            className="-translate-x-5"
+                            className={s.sm_bar_shift}
                             SMList={social_medias}
                         />
                     </div>

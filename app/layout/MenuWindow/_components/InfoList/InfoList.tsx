@@ -2,22 +2,19 @@ import { monserrat_regular } from "@/fonts/fonts"
 import { cn } from "@/lib/utils"
 import s from "./style.module.scss";
 import { Fragment } from "react";
-import { useWindowWidth } from "@/hooks";
 
-export const InfoLine = ()=> {
-    const isMoreThen950px = useWindowWidth(950) as boolean;
+export const InfoList = ()=> {
     const listInfo = [
-        `DP Carrelage copyright © ${(new Date).getFullYear().toString()}`,
         "06 78 32 20 60",
         "didier.puget70@gmail.com",
+        "25580 ETALANS",
         "22 rue de la pissoire",
-        "25580 ETALANS"
+        `DP Carrelage copyright © ${(new Date).getFullYear().toString()}`,
     ];
-    const listInfoLen = listInfo.length;
 
     return (
         <div className={cn(
-            s.line_info,
+            s.infoList,
             monserrat_regular.className
         )}>
             {listInfo.map((el, id)=>
@@ -27,14 +24,6 @@ export const InfoLine = ()=> {
                     <span>
                         {el}
                     </span>
-                    {(id < listInfoLen - 1 
-                        && 
-                        isMoreThen950px
-                    ) &&
-                        <span className={s.puce}>
-                            •
-                        </span>
-                    }
                 </Fragment>
             )}
         </div>

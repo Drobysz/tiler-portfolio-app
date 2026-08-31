@@ -1,5 +1,4 @@
 import {
-    MouseGuide,
     NotificationBar,
     ScrollToTopBtn,
 } from "./_components";
@@ -7,7 +6,6 @@ import {
 export const LayoutOverlays = ()=> {
     return (
         <>
-            <MouseGuide />
             <NotificationBar />
             <ScrollToTopBtn />
         </>

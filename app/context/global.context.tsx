@@ -1,18 +1,14 @@
 "use client"
 
 import { createContext, ReactNode, useState } from "react";
-import { AppNotification, Coords, GlobalContextInterface } from "./global.interface";
-import { useWindowWidth } from "@/hooks";
+import { AppNotification, GlobalContextInterface } from "./global.interface";
 
 export const GlobalContext = createContext<GlobalContextInterface>({
-    mouseText: "",
-	mouseGuide: null,
-	isMouseVisible: false,
 	notification: { status: "none", text: "" },
+    isMenuWindowOpen: false,
 
-    setMouseText: ()=> {},
-	setMouseGuide: ()=> {},
 	setNotification: () => {},
+    setIsMenuOpen: () => {},
 });
 
 export const GlobalContextProvider = ({
@@ -20,24 +16,20 @@ export const GlobalContextProvider = ({
 }: {
     children: ReactNode;
 })=> {
-    const [mouseText, setMouseText] = useState("");
-	const [mouseGuide, setMouseGuide] = useState<Coords | null>(null);
-	const [notification, setNotification] = useState<AppNotification>({ status: "none", text: "" });
+	const [notification, setNotification] = useState<AppNotification>(
+        { status: "none", text: "" }
+    );
+    const [isMenuWindowOpen, setIsMenuOpen] = useState(false);
 
-
-	const isMouseVisible = useWindowWidth(768) as boolean;
 
     return (
         <GlobalContext.Provider 
             value={{
-                mouseText: mouseText,
-                mouseGuide: mouseGuide,
                 notification: notification,
-                isMouseVisible: isMouseVisible,
+                isMenuWindowOpen: isMenuWindowOpen,
 
-                setMouseText,
-                setMouseGuide,
                 setNotification,
+                setIsMenuOpen,
             }}
         >
             {children}

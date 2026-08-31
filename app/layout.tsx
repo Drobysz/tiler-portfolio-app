@@ -9,6 +9,8 @@ import { prime_regular } from "@/fonts/fonts";
 import {
   Header,
   Footer,
+  BlurWrapper,
+  MenuWindow,
 } from "./layout/index";
 
 export const metadata: Metadata = {
@@ -34,13 +36,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       >
         <GlobalContextProvider>
           <SmoothScrollContextProvider>
-            <div className={s.wrapper}>
+            <MenuWindow />
+            <BlurWrapper className={s.wrapper}>
               <Header />
               <main className="min-h-screen">
                 {children}
               </main>
               <Footer />
-            </div>
+            </BlurWrapper>
             <LayoutOverlays />
           </SmoothScrollContextProvider>
         </GlobalContextProvider>

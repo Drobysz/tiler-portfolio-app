@@ -1,7 +1,9 @@
 @reference "tailwindcss";
 
 .wrapper {
-    @apply relative px-4 rounded-t-2xl bg-black text-white -mt-20 z-20;
+    @apply relative px-4 
+        rounded-t-2xl bg-black 
+        text-white -mt-20 z-20;
     display: grid;
     grid-template-columns: auto minmax(270px, 1440) auto;
     grid-template-areas: ". footer .";
@@ -16,4 +18,52 @@
     @apply bg-black text-white 
         text-4xl font-medium flex 
         items-center gap-2;
+}
+
+.logo_container {
+    @apply flex flex-col 
+        justify-between text-white;
+}
+
+.nav_container {
+    @apply flex flex-col gap-3;
+}
+
+.sm_bar_shift {
+    @apply -translate-x-5 max-[760px]:-translate-x-2;
+}
+
+@media (max-width: 950px) {
+    .footer {
+        grid-area: footer;
+        @apply flex flex-col
+            gap-25;
+    }
+
+    .footer > :first-child {
+        @apply order-2;
+    }
+
+    .footer > :last-child {
+        @apply order-1;
+    }
+
+    .logo_container {
+        @apply justify-start gap-20;
+    }
+}
+
+@media (max-width: 490px) {
+    .footer {
+        @apply gap-15 px-1;
+    }
+
+    .nav_container {
+        @apply gap-0;
+    }
+
+    .title {
+        @apply flex-col items-start
+            text-2xl gap-0;
+    }
 }

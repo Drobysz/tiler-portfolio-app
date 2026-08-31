@@ -16,7 +16,8 @@
 
 .title {
     @apply text-center font-semibold 
-        text-9xl leading-40;
+        text-9xl leading-40 
+        whitespace-nowrap;
 }
 
 .separator {
@@ -25,4 +26,100 @@
 
 .logo {
     @apply w-35 h-35 rotate-45;
+}
+
+@media (max-width: 1190px) {
+    .title {
+        @apply text-8xl;
+    }
+
+    .separator {
+        @apply h-30.5;
+    }
+
+    .logo {
+        @apply w-30 h-30;
+    }
+}
+
+@media (max-width: 970px) {
+    .title {
+        @apply text-7xl;
+    }
+
+    .separator {
+        @apply h-25.5;
+    }
+
+    .logo {
+        @apply w-25 h-25;
+    }
+}
+
+@media (max-width: 830px) {
+    .title {
+        @apply text-6xl;
+    }
+
+    .separator {
+        @apply h-20;
+    }
+
+    .logo {
+        @apply w-20 h-20;
+    }
+}
+
+@media (max-width: 625px) {
+    .title {
+        @apply text-5xl;
+    }
+
+    .separator {
+        @apply h-15;
+    }
+
+    .logo {
+        @apply w-15 h-15;
+    }
+
+    .enterprise_name_logo {
+        @apply gap-5;
+    }
+}
+
+@media (max-width: 530px) {
+    .title {
+        @apply text-4xl;
+    }
+
+    .separator {
+        @apply h-10 w-1;
+    }
+
+    .logo {
+        @apply w-10 h-10;
+    }
+
+    .enterprise_name_logo {
+        @apply gap-3;
+    }
+}
+
+@media (max-width: 350px) {
+    .title {
+        @apply text-2xl;
+    }
+
+    .separator {
+        @apply h-7 w-0.5;
+    }
+
+    .logo {
+        @apply w-6.5 h-6.5;
+    }
+
+    .enterprise_name_logo {
+        @apply gap-2.5;
+    }
 }

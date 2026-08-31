@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .dev_title {
-  @apply inline-block text-4xl font-[inherit];
+  @apply inline-block text-inherit font-[inherit];
 
     background: linear-gradient(
         to top,

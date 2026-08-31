@@ -8,14 +8,17 @@ import {
     HeaderWrapper,
     Logo,
     Navigation,
+    MenuBtn,
 } from "./_compoents";
 import { usePathname } from "next/navigation";
+import { useWindowWidth } from "@/hooks";
 
 export const Header = ()=> {
     const { scrollY } = useScroll();
     const [narrowed, setNarrowed] = useState(false);
     const pathname = usePathname();
     const isMainPage = pathname === "/";
+    const isDesktop = useWindowWidth(660) as boolean;
     // const [direction, setDirection] = useState<"down" | "up">("down");
 
     useMotionValueEvent(scrollY, "change", (current)=> {
@@ -36,15 +39,23 @@ export const Header = ()=> {
             <HeaderWrapper
                 className={s.header}    
                 isNarrowed={narrowed}
+                isDesktop={isDesktop}
                 // direction={direction}
             >
                 <Logo 
                     isNarrowed={narrowed}
+                    isDesktop={isDesktop}
                 />
-                <Navigation 
-                    isNarrowed={narrowed}
-                    isMainPage={isMainPage}
-                />
+                {isDesktop &&
+                    <Navigation 
+                        isNarrowed={narrowed}
+                        isMainPage={isMainPage}
+                    />
+                }
+
+                {!isDesktop &&
+                    <MenuBtn />
+                }
             </HeaderWrapper>
         </header>
     )

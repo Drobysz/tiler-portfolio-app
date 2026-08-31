@@ -1,0 +1,24 @@
+@reference "tailwindcss";
+
+.menu_window_container {
+    @apply sticky inset-0 
+        h-screen p-3 w-full
+        z-50;
+}
+
+.menu_window {
+    @apply bg-black/90 backdrop-blur-2xl
+        rounded-2xl py-4 pb-8 px-3 h-full
+        text-white grid 
+        grid-rows-[auto_1fr] gap-8;
+}
+
+.cross {
+    @apply p-1 duration-250 ease-in-out
+        transition-[colors,transform]
+        hover:opacity-70 active:scale-95;
+}
+
+.cross * {
+    @apply w-6 h-6;
+}

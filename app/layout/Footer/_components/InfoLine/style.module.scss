@@ -5,3 +5,13 @@
         bg-black text-white items-center
         text-sm;
 }
+
+.puce {
+    @apply scale-250 origin-center pb-0.5;
+}
+
+@media (max-width: 950px) {
+    .line_info {
+        @apply flex flex-col pb-10;
+    }
+}

@@ -1,0 +1,8 @@
+@reference "tailwindcss";
+
+.menu_btn {
+    @apply h-full px-5 py-1 text-white
+        flex items-center gap-4 duration-150
+        transition-transform active:scale-97 
+        active:opacity-90 ease-in;
+}

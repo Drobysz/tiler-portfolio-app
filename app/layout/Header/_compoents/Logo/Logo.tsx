@@ -3,13 +3,17 @@ import LogoIcon from "@/assets/logo_tiler_custom.svg"
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useWindowWidth } from "@/hooks";
 
 export const Logo = ({
-    isNarrowed
+    isNarrowed,
+    isDesktop,
 }: {
     isNarrowed: boolean;
+    isDesktop: boolean;
 })=> {
     const router = useRouter();
+    const isNotMobile = useWindowWidth(370) as boolean;
     const [hover, setHover] = useState(false);
 
     return (
@@ -21,17 +25,27 @@ export const Logo = ({
             onMouseEnter={()=> setHover(true)}
             onMouseLeave={()=> setHover(false)}
         >
-            {!isNarrowed &&
+            {((!isNarrowed || !isDesktop) && isNotMobile) &&
                 <>
                     <SplitByRowsText
                         tag="span"
-                        className="text-black whitespace-nowrap"
+                        className={cn(
+                            "text-black whitespace-nowrap",
+                            isDesktop 
+                                ? "text-black"
+                                : "text-white"
+                        )}
                     >
                         D.P CARRELAGES
                     </SplitByRowsText>
                     <div className="h-full py-1.5">
                         <div 
-                            className="h-full bg-black w-px"
+                            className={cn(
+                                "h-full w-px",
+                                isDesktop 
+                                    ? "bg-black"
+                                    : "bg-white"
+                            )}
                         />
                     </div>
                 </>
@@ -43,7 +57,7 @@ export const Logo = ({
                     "duration-300 ease-out hover:scale-170",
                     "active:scale-135",
                     hover && "rotate-160",
-                    isNarrowed 
+                    isNarrowed || !isDesktop
                         ? "text-white scale-130"
                         : "text-black"
                 )}
