@@ -16,6 +16,7 @@ export const SplitText = <T extends Tag>({
     animationType = "blurred",
     viewportAmount = 0.3,
     delayChildren,
+    once=true,
     ...props
 }: SplitTextProps<T>)=> {
     const words = children.split(" ");
@@ -44,7 +45,7 @@ export const SplitText = <T extends Tag>({
             )}
              onViewportEnter={() => setVisible(true)}
             viewport={{
-                once: true,
+                once: once,
                 amount: viewportAmount,
             }}
         >

@@ -14,4 +14,5 @@ export type SplitTextProps<T extends Tag> = Omit<
     animationType?: "unwrapping" | "blurred";
     viewportAmount?: number;
     delayChildren?: number;
+    once?: boolean;
 };

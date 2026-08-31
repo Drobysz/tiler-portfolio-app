@@ -46,6 +46,7 @@ export const ExtendingPoster = ()=> {
                                 s.title,
                                 pageFooterPoster.textColor,
                             )}
+                            once={false}
                             tag="h2"
                         >
                             D.P Carrelages

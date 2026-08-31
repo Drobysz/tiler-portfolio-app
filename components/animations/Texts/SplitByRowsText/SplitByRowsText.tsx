@@ -8,10 +8,12 @@ import SplitType from "split-type";
 export const SplitByRowsText = ({
     tag,
     children,
+    once=true,
     className,
 }: {
     tag: Tag;
     children: string;
+    once?: boolean;
     className?: string;
 })=> {
     const motionTags = {
@@ -30,7 +32,7 @@ export const SplitByRowsText = ({
     const linesRef = useRef<HTMLElement[]>([]);
 
     const isInView = useInView(parentRef, {
-        once: true,
+        once: once,
         amount: 0.3
     })
 

@@ -10,9 +10,6 @@ export const FooterPosterLogo = ({
 })=> {
     return (
         <motion.div
-            viewport={{
-                once: true,
-            }}
             initial={{
                 rotate: 45
             }}
