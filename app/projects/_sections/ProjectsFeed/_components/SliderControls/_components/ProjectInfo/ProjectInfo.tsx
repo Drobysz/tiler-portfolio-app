@@ -28,7 +28,7 @@ export const ProjectInfo = ({
                 className={s.separator}
             />
             <div className={s.title_container}>
-                <ul className="flex gap-8">
+                <ul className="flex gap-x-8 gap-y-0.5 flex-wrap max-[760px]:gap-x-4">
                     {tags.map((t, i)=>         
                         <li 
                             key={`${name}-${i}`}

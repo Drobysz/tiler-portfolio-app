@@ -17,7 +17,7 @@
         text-black/80;
 }
 
-.form_container{
+.form_container {
     @apply grid grid-cols-2
         gap-x-3 gap-y-5;
 }
@@ -25,4 +25,18 @@
 .input {
     @apply rounded-2xl border-zinc-500
         bg-gray-100;
+}
+
+@media (max-width: 400px) {
+    .centralize {
+        @apply h-fit pt-30 pb-50 px-3;
+    }
+
+    .contact_form_window {
+        @apply px-4 w-full;
+    }
+
+    .title {
+        @apply text-2xl;
+    }
 }

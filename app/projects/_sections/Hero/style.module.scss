@@ -9,10 +9,20 @@
 .title_front {
     @apply flex h-full w-full items-center
         justify-center bg-white
-        font-semibold text-7xl;
+        font-semibold text-7xl
+        max-[640px]:text-5xl
+        max-[440px]:text-4xl
+        max-[340px]:text-3xl
+        ;
         &__rows {
             @apply flex flex-col z-20
                 bg-clip-text text-transparent
                 bg-yellow-400;
         }
 }
+
+// @media (max-width: 640px) {
+//     .title_front {
+//         @apply text-5xl;
+//     }
+// }

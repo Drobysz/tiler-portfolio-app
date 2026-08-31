@@ -9,9 +9,11 @@ import forms from "@/json/contact_form.json";
 import { Input, MainBtn } from "@/components";
 import { CircularProgress } from "@mui/material";
 import { GlobalContext } from "@/app/context/global.context";
+import { useWindowWidth } from "@/hooks";
 
 export const PageView = ()=> {
     const { setNotification } = useContext(GlobalContext);
+    const isFormExtended = useWindowWidth(590) as boolean;
 
     const [state, action, pending] = 
         useActionState<FormState, FormData>(
@@ -64,7 +66,12 @@ export const PageView = ()=> {
                                 &&
                                 state.errors[form.name as keyof FormError]
                             }
-                            colSpan={form.name == "description" ? 2 : 1}
+                            colSpan={
+                                form.name == "description"
+                                ||
+                                !isFormExtended
+                                ? 2 : 1
+                            }
                         />
                     )}
                     <div className="col-span-2 flex justify-center">

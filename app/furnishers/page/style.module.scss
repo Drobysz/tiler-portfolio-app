@@ -48,3 +48,9 @@
         rounded-xl flex items-center
         justify-center gap-2;
 }
+
+@media (max-width: 400px) {
+    .panel {
+        @apply flex-col;
+    }
+}

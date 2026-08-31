@@ -8,7 +8,7 @@
 .elevator {
     @apply sticky top-0 h-screen 
         w-150 flex items-end gap-3
-        pb-3;
+        pb-3 px-3;
 }
 
 .controls_panel {
@@ -22,3 +22,18 @@
 // .controls_btns_container {
 //     @apply ;   
 // }
+
+@media (max-width:760px) {
+    .elevator {
+        @apply max-w-150 px-20;
+    }
+    .controls_panel {
+        @apply px-1 py-1.5;
+    }
+}
+
+@media (max-width:620px) {
+    .elevator {
+        @apply px-3;
+    }
+}

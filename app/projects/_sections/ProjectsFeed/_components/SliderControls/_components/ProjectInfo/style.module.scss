@@ -39,6 +39,33 @@
     }
 }
 
-.desc_wrapper_extended {
-    @apply grid-rows-1 opacity-100;
+@media (max-width:760px) {
+    .title_container {
+        @apply flex flex-col gap-4
+            px-2;
+            
+        .title {
+            @apply text-2xl font-medium;
+        }
+    }
+
+    .logo_title {
+        @apply px-6 text-lg;
+    }
+}
+
+@media (max-width:440px) {
+    .title_container {
+        .title {
+            @apply text-lg;
+        }
+    }
+
+    .logo_title {
+        @apply px-6 text-sm;
+    }
+
+    .tag {
+        @apply text-xs;
+    }
 }

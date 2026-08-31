@@ -7,3 +7,16 @@
 .btn_group {
     @apply inline-flex gap-2 items-center;
 }
+
+@media (max-width: 590px) {
+    .control_btns_container {
+        @apply flex-col justify-start
+            gap-3;
+    }
+}
+
+@media (max-width:440px) {
+    .control_btns_container > :last-child {
+        @apply self-center;
+    }
+}
