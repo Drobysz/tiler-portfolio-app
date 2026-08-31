@@ -1,15 +1,52 @@
 @reference "tailwindcss";
 
+.section_container {
+    @apply w-full h-[130vh] 
+        rounded-t-2xl translate-y-1
+        max-[940px]:h-[90vh]
+        max-[370px]:h-[80vh];
+}
+
+.inner_spacing {
+    @apply flex flex-col gap-50 
+        z-10 py-20
+        max-[370px]:gap-30
+        max-[370px]:py-10;
+}
+
+.header {
+    @apply flex flex-col items-center;
+}
+
+.footer {
+    @apply flex flex-col 
+        items-center gap-14
+        max-[460px]:gap-7;
+}
+
 .title {
-    @apply text-9xl font-semibold text-white
-        text-center;
+    @apply text-9xl font-semibold 
+        text-white text-center
+        max-[940px]:text-7xl
+        max-[540px]:text-6xl
+        max-[460px]:text-5xl
+        max-[370px]:text-4xl;
 }
 
 .subtitle {
-    @apply text-center text-2xl text-zinc-200
-        font-semibold;
+    @apply text-center text-2xl 
+        text-zinc-200 font-semibold
+        max-[940px]:text-xl
+        max-[460px]:text-sm
+        max-[370px]:text-xs;
 }
 
 .desc {
     @apply text-center text-white max-w-80;
 }
+
+// @media (max-width: 940px) {
+//     .title {
+//         @apply ;
+//     }
+// }

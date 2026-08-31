@@ -1,0 +1,11 @@
+@reference "tailwindcss";
+
+.feed_container {
+    @apply pt-60 pb-30 
+        max-[767px]:pt-30 
+        max-[767px]:pb-15;
+}
+
+.deformed {
+    @apply scale-115 rotate-3;
+}

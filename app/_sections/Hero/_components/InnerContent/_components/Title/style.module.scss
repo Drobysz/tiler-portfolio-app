@@ -2,5 +2,9 @@
 
 .title {
     @apply text-9xl text-white
-        font-semibold leading-36;
+        font-semibold leading-36
+        max-[1040px]:text-7xl
+        max-[1040px]:leading-20
+        max-[470px]:text-5xl
+        max-[470px]:leading-12;
 }

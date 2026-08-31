@@ -1,13 +1,14 @@
 import ScrollVelocity from "@/components/animations/ScrollVelocity/ScrollVelocity"
 import { SectContainer } from "@/components/containers/SectContainer/SectContainer"
+import s from "./style.module.scss";
 
 export const ServiceAnimationFeed = ()=> {
     return (
         <SectContainer
-         className="pt-60 pb-30"
+            className={s.feed_container}
         >
             <div
-                className="scale-115 rotate-3"
+                className={s.deformed}
             >
                 <ScrollVelocity
                     texts={[

@@ -66,10 +66,11 @@ export const Gallery = ()=> {
                                 className="w-full"
                             >
                                 <Image
-                                    className="w-full h-auto rounded-2xl"
+                                    className={s.image_cover}
                                     src={`/illustration/tile${(rowId * IMAGES_PER_ROW) + (listId + 1)}.jpg`}
                                     width={300}
                                     height={300}
+                                    loading="eager"
                                     alt="gallery image"
                                 />
                             </li>

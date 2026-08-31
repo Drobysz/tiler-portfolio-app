@@ -18,7 +18,7 @@ export const Quote = ()=> {
             className={s.quote_container}
         >
             <Line />
-            <div className="grid grid-cols-2 gap-4">
+            <div className={s.inner_content}>
                 <SplitText 
                     className={s.title}
                     tag="h2"

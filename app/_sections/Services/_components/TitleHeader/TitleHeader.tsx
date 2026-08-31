@@ -5,7 +5,7 @@ import { SplitText } from "@/components/animations/Texts/SplitText/SplitText";
 export const TitleHeader = ()=> {
     return (
         <header
-            className="grid grid-cols-2"
+            className={s.header}
         >
             <SplitText
                 className={s.title}

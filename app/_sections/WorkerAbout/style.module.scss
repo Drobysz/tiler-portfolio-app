@@ -1,11 +1,16 @@
 @reference "tailwindcss";
 
 .about_container {
-    @apply py-30 flex flex-col gap-10;
+    @apply py-30 flex 
+        flex-col gap-10
+        max-[767px]:py-15
+        max-[767px]:pb-5;
 }
 
 .title {
-    @apply text-6xl text-center font-semibold;
+    @apply text-6xl text-center 
+        font-semibold
+        max-[480px]:text-4xl;
 }
 
 .data_space {
@@ -16,7 +21,32 @@
     @apply flex flex-col gap-3;
 }
 
+.params_title {
+    @apply text-3xl font-medium text-end
+        max-[430px]:text-2xl
+        max-[360px]:text-xl;
+}
+
+.params_subtitle {
+    @apply text-zinc-500 text-sm text-end
+        max-[430px]:text-xs;
+}
+
 .param_block {
     @apply flex items-center gap-3
         pr-20 text-2xl font-medium;
+}
+
+@media (max-width: 860px) {
+    .data_space {
+        @apply flex flex-col;
+    }
+
+    .data_space > :first-child {
+        @apply self-center order-2;
+    }
+
+    .data_space > :last-child {
+        @apply self-center order-1;
+    }
 }

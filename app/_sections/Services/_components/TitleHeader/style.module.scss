@@ -1,9 +1,23 @@
 @reference "tailwindcss";
 
+.header {
+    @apply grid grid-cols-2;
+}
+
 .title {
-    @apply text-4xl font-semibold;
+    @apply text-5xl font-semibold
+    max-[1070px]:text-3xl
+    max-[680px]:text-2xl;
 }
 
 .desc {
-    @apply font-medium text-3xl;
+    @apply text-4xl text-zinc-200
+        max-[1070px]:text-2xl
+        max-[680px]:text-lg;
+}
+
+@media (max-width: 680px) {
+    .header {
+        @apply flex flex-col gap-5;
+    }
 }

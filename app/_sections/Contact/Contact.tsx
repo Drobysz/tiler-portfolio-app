@@ -10,12 +10,12 @@ export const Contact = ()=> {
         <GlidingImageBackground
             img_url="/poster.jpg"
             withShadow
-            className="w-full h-[130vh] rounded-t-2xl translate-y-1"
+            className={s.section_container}
         >
             <SectContainer
-                className="flex flex-col gap-50 z-10 py-20"
+                className={s.inner_spacing}
             >
-                <div className="flex flex-col items-center">
+                <div className={s.header}>
                     <SplitByRowsText 
                         className={s.subtitle}
                         tag="p"
@@ -30,7 +30,7 @@ export const Contact = ()=> {
                     </SplitText>
                 </div>
 
-                <ViewReveal className="flex flex-col items-center gap-14">
+                <ViewReveal className={s.footer}>
                     <p className={s.desc}>
                         Si mes services vous intéressent en Franche-Comté, je suis toujours à votre disposition.
                     </p>

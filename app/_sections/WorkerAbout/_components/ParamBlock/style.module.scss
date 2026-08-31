@@ -1,0 +1,30 @@
+@reference "tailwindcss"
+
+.param_block_container {
+    @apply flex flex-col gap-2 pr-5;
+}
+
+.param_block {
+    @apply flex items-center gap-3
+        pr-20 text-2xl font-medium;
+}
+
+.icon {
+    @apply w-6 h-6;
+}
+
+@media (max-width: 430px) {
+    .param_block_container {
+        @apply gap-1.5 pr-2;
+    }
+
+    .param_block {
+        @apply gap-2 pr-10 text-xl;
+    }
+}
+
+@media (max-width: 330px) {
+    .param_block {
+        @apply gap-2 pr-5;
+    }
+}

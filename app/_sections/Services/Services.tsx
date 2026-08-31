@@ -27,7 +27,7 @@ export const Values = ()=> {
                             >
                                 <Image
                                     src={svc.img}
-                                    className="max-h-50 w-auto rounded-xl"
+                                    className={s.image_frame}
                                     width={500}
                                     height={240}
                                     alt="value tile icon"

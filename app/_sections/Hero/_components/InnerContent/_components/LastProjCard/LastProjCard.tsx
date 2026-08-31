@@ -16,6 +16,7 @@ export const LastProjCard = ()=> {
     return (
         <Link
             href="/projects"
+            className="max-[1040px]:w-full"
             onMouseEnter={()=> setHover(true)}
             onMouseLeave={()=> setHover(false)}
         >

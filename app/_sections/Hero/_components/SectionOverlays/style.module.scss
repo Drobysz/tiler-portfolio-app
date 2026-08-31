@@ -4,7 +4,11 @@
     @apply absolute left-1/2 top-1/2 
         -translate-1/2 text-amber-400
         transition-opacity ease-out duration-100
-        z-10 text-6xl font-semibold;
+        z-10 text-6xl font-semibold
+        max-[1120px]:text-5xl
+        max-[895px]:text-4xl
+        max-[700px]:text-2xl
+        max-[450px]:text-xl;
 }
 
 .video_shadow {
