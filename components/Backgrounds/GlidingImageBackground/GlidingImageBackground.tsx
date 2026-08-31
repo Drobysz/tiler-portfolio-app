@@ -46,10 +46,12 @@ export const GlidingImageBackground = ({
                 }}
             >
                 <Image
-                    className="w-full h-auto"
+                    className="object-cover"
                     src={img_url}
-                    width={1200}
-                    height={1200}
+                    // width={1200}
+                    // height={1200}
+                    sizes="100vw"
+                    fill
                     alt="sliding background image"
                 />
             </motion.div>

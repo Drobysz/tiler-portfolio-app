@@ -7,3 +7,5 @@ export * from "./UnderlinedLink/UnderlinedInnerLink";
 export * from "./UnderlinedLink/UnderlinedLink";
 export * from "./Backgrounds/GlidingImageBackground/GlidingImageBackground";
 export * from "./Input/Input";
+export * from "./Navigation/Navigation";
+export * from "./Logo/Logo";
