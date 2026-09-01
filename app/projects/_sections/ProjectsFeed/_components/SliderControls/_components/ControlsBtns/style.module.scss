@@ -13,10 +13,15 @@
         @apply flex-col justify-start
             gap-3;
     }
+    .control_btns_container 
+    > :last-child 
+    > button{
+        @apply py-2.5 px-4;
+    }
 }
 
 @media (max-width:440px) {
     .control_btns_container > :last-child {
-        @apply self-center;
+        @apply self-center gap-5;
     }
 }

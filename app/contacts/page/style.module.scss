@@ -27,9 +27,15 @@
         bg-gray-100;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 590px) {
     .centralize {
-        @apply h-fit pt-30 pb-50 px-3;
+        @apply h-fit pt-21 pb-35 px-1.5;
+    }
+}
+
+@media (max-width: 430px) {
+    .centralize {
+        @apply h-fit pt-25 pb-50 px-3;
     }
 
     .contact_form_window {
