@@ -6,7 +6,7 @@
 }
 
 .elevator {
-    @apply sticky top-0 h-screen 
+    @apply sticky top-0 h-dvh 
         w-150 flex items-end gap-3
         pb-3 px-3;
 }
