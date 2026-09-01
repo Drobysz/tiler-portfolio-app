@@ -42,7 +42,7 @@ export const GlidingImageBackground = ({
                 className="absolute inset-0 h-full w-full"
                 style={{
                     translateY: translateY,
-                    scale: scaling ? scale : 1,
+                    scale: scaling ? scale : 1.1,
                 }}
             >
                 <Image

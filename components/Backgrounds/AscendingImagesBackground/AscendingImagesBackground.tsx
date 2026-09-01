@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import images from "./images";
+import { cn } from "@/lib/utils";
 
 const GROUP_HEIGHT = 1800;
 
@@ -54,16 +55,19 @@ function ImagesGroup() {
   );
 }
 
-export default function AscendingImagesBackground() {
+export default function AscendingImagesBackground({
+  className,
+}: {
+  className?: string;
+}) {
   return (
     <div
       aria-hidden
-      className="
-        pointer-events-none
-        absolute
-        inset-0
-        overflow-hidden
-      "
+      className={cn(
+        className,
+        "pointer-events-none absolute",
+        "inset-0 overflow-hidden",
+      )}
     >
       <motion.div
         className="flex w-full flex-col"
