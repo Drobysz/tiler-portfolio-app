@@ -9,10 +9,11 @@ export const VideoPlayer = ()=> {
             muted
             loop
             poster="/poster.jpg"
+            playsInline
             className={s.video_tag_centralize}
         >
             <source 
-                src="dp_video.webm"
+                src="/dp_video.webm"
                 type="video/webm"
             />
         </video>
