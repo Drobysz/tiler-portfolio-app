@@ -29,7 +29,7 @@ export const GlidingImageBackground = ({
     const scale = useTransform(
         scrollYProgress,
         [0, 1],
-        ["1.6", "1.2"],
+        ["1.5", "1.1"],
     );
 
     return (
