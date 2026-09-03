@@ -9,10 +9,12 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import footerPosters from "./footerPosters";
 import { FooterPosterLogo } from "./_components/FooterPosterLogo";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 export const ExtendingPoster = ()=> {
     const pathname = usePathname();
     const containerRef = useRef<HTMLDivElement | null>(null);
+    const isDesktop = useWindowWidth(450) as boolean;
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end end"]
@@ -37,7 +39,10 @@ export const ExtendingPoster = ()=> {
                     style={{
                         translateY: translateY
                     }}
-                    img_url={pageFooterPoster.img_url}
+                    img_url={isDesktop 
+                        ? pageFooterPoster.img_url 
+                        : pageFooterPoster.mobile_img_url
+                    }
                     className={s.poster_container}
                 >
                     <div className={s.enterprise_name_logo}>
