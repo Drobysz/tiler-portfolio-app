@@ -2,18 +2,23 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import images from "./images";
+import rawImages from "./images";
 import { cn } from "@/lib/utils";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const GROUP_HEIGHT = 1800;
 
 function ImagesGroup() {
+  const isDesktop = useWindowWidth(550) as boolean;
+  const mobileImages = rawImages.filter((_, index) => index % 2 != 0);
+  const outputImages = isDesktop ? rawImages : mobileImages;
+
   return (
     <div
       className="relative shrink-0"
       style={{ height: GROUP_HEIGHT }}
     >
-      {images.map((image, index) => {
+      {outputImages.map((image, index) => {
         const floatDuration = 8 + (index % 4) * 2;
         const floatDelay = index * 0.2;
 
