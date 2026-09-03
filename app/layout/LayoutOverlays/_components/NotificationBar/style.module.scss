@@ -5,7 +5,7 @@
         z-50 rounded-xl px-4 
         py-3 flex flex-col
         gap-3 max-h-200 h-fit 
-        w-fit overflow-y-scroll
+        w-fit overflow-y-auto
         pointer-events-none;
     animation: fadeIn 0.5s ease;
     width: min(50rem, calc(100vw - 1rem));
