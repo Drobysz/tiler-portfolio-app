@@ -4,10 +4,12 @@ import { GlidingImageBackground } from "@/components";
 import { SliderControls } from "./_components";
 import { useEffect, useState } from "react";
 import projects from "@/json/projects.json";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 export const ProjectsFeed = ()=> {
     const [projId, setProjId] = useState(0);
     const projectLen = projects.length;
+    const isDesktop = useWindowWidth(550) as boolean;
 
     useEffect(()=> {
         const elements = projects.map(p=> document.getElementById(p.id))
@@ -49,7 +51,10 @@ export const ProjectsFeed = ()=> {
                     id={p.id}
                     key={`${p.name}-${i}`}
                     scaling={false}
-                    img_url={p.cover_img_url}
+                    img_url={isDesktop 
+                        ? p.cover_img_url 
+                        : p.mobile_cover_img_url
+                    }
                     className="h-screen w-full"
                 >
                     <></>

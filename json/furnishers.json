@@ -1,22 +1,17 @@
 [
     {
-        "name": "Comofranc",
-        "logo_src": "/furnishers/logo/comofranc-logo.svg",
-        "background_src": "/furnishers/background/comofranc-back.png",
-        "description": "Fournisseur de carrelage, matériaux et équipements pour les projets de construction et de rénovation."
-    },
-
-    {
-        "name": "Dalmau",
-        "logo_src": "/furnishers/logo/dalmau-logo.png",
-        "background_src": "/furnishers/background/dalmau-back.png",
-        "description": "Spécialiste du carrelage et des revêtements, avec un large choix de matériaux pour sols et murs."
+        "name": "Vieille Materiaux",
+        "logo_src": "/furnishers/logo/vieille-materiaux-logo.svg",
+        "background_src": "/furnishers/background/vieille-materiaux-back.webp",
+        "mobile_background_src": "/furnishers/background/vieille-materiaux-back-mobile.webp",
+        "description": "Spécialiste des matériaux de construction, du carrelage et des solutions pour l’aménagement et la rénovation."
     },
 
     {
         "name": "Climent-Saone",
         "logo_src": "/furnishers/logo/climent-logo.svg",
         "background_src": "/furnishers/background/climent-back.png",
+        "mobile_background_src": "/furnishers/background/climent-back-mobile.webp",
         "description": "Fournisseur de matériaux et solutions pour l’aménagement, la rénovation et les travaux de finition."
     }
 ]

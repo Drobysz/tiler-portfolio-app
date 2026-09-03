@@ -12,12 +12,15 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 export default function PageView() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [direction, setDirection] = useState<Direction>(1);
 
     const posters = furnishers.map(f => f.background_src);
+    const mobilePosters = furnishers.map(f => f.mobile_background_src);
+    const isDesktop = useWindowWidth(500) as boolean;
     const currentProj = furnishers[activeIndex];
 
     const next = ()=> {
@@ -38,7 +41,7 @@ export default function PageView() {
 
     return (
         <ImagesSliderBackground
-            images={posters}
+            images={isDesktop ? posters : mobilePosters}
             activeIndex={activeIndex}
             direction={direction}
             className="flex justify-center h-[115vh] pb-20"
