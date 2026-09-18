@@ -11,3 +11,20 @@
         before:translate-y-full hover:before:translate-y-0
         before:duration-600;
 }
+
+.default_sign {
+    @apply transition-transform
+        inline-block
+        duration-650
+        whitespace-nowrap;
+}
+
+.cover_sign {
+    @apply duration-600 
+        ease-out 
+        transition-transform 
+        font-medium
+        absolute left-1/2 
+        whitespace-nowrap 
+        -translate-x-1/2;
+}

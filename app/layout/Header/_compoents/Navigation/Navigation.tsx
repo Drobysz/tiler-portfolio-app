@@ -35,13 +35,15 @@ const NavElement = ({
             <Link
                 href={href}
             >
-                <span className="whitespace-nowrap">
+                <span className={cn(
+                    s.default_sign,
+                    hover && "-translate-y-10"
+                )}>
                     {children}
                 </span>
                 <span
                     className={cn(
-                        "duration-600 ease-out transition-transform font-medium",
-                        "absolute left-1/2 whitespace-nowrap -translate-x-1/2", {
+                        s.cover_sign, {
                             ["text-black"]: isNarrowed,
                             ["text-white"]: !isNarrowed,
                             ["translate-y-0"]: hover,
