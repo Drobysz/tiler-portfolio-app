@@ -40,6 +40,7 @@ const NavElement = ({
             >
                 <SplitByRowsText
                     tag="span"
+                    once={false}
                     className="whitespace-nowrap"
                 >
                     {children}
