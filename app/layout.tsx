@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   description:
     "Carreleur à Étalans, DP Carrelage réalise vos poses de carrelage, faïence, parquet et panneaux décoratifs en Franche-Comté.",
   applicationName: "DP Carrelage",
+  verification: {
+    google: "PyKyLvx6SH5tHoVO8pk1Rke0Wm1uXxyvR61dFh7lnJ8",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
